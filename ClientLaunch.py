@@ -20,10 +20,10 @@ def main():
       print(ValueError)
       
       
-  print ("1 is for registering"
-          "2 is for get quote"
-           "3 is for get quote req name"
-           "4 is for add quote")
+  print ("1 is for registering\n
+          "2 is for get quote\n"
+           "3 is for get quote req name\n"
+           "4 is for add quote\n")
     
   selection = raw_input("Select an option from above: ")
   

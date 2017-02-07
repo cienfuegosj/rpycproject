@@ -1,4 +1,5 @@
 # Quote Server
+# Richard Parker
 # Javier Cienfuegos
 
 import rpyc

@@ -1,4 +1,5 @@
 # Quote Server Admin
+# Richard Parker
 # Javier Cienfuegos
 
 class QuoteServerAdmin:

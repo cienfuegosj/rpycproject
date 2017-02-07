@@ -1,0 +1,26 @@
+# Quote Server Admin Documentation
+# Javier Cienfuegos Jr. 
+
+<ClassName>
+  "QuoteServerAdmin"
+</ClassName>
+
+<ClassInit>
+  "QuoteServerAdmin()"
+  <Class Variables>
+    UQR text file As String
+    QUA text file As String
+  </Class Variables>
+</ClassInit>
+
+<ClassMethods>
+  getURQdb()
+    - Read in 'UQR.txt' file which is a CSV (Comma-Separated), which is the form
+    of username;qreqcount where qreqcount is the request count of quotes from the user
+    - Return dictionary with (key,value) pair (username, qreqcount)
+  getQUAdb()
+    - Read in 'QUA.txt' file which is a CSV (Comma-Separted)
+    of quote;username where 'quote' is the quote from string and
+    'username' is the user who submitted it.username
+    - Return dictionary with (key,value) pair (quote, username)
+</ClassMethods>

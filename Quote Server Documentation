@@ -1,0 +1,40 @@
+# Quote Server Documentation
+# Javier Cienfuegos Jr. 
+
+<ClassName>
+  "QuoteServer"
+</ClassName>
+
+<ClassInit>
+  "QuoteServer()"
+</ClassInit>
+
+<Imports>
+  <Module>
+    "QSAdmin"
+  </Module>
+</Imports>
+
+
+<ClassMethods>
+  exposed_register(name As String)
+    - 'name' is a string representing the username
+    - return 'OK' if username is not in the current U-RQ database
+    - return 'KO' if there is any error
+  exposed_get_quote(name As String)
+    - 'name' is a string representing the username
+    - Check the database if the username is valid
+    - If valid, return random quote from Q-UA database
+    - Else, raise error
+  exposed_quotes_requested(name As String)
+    - 'name' is a string representing the username
+    - Check database is username is valid
+    - If valid, return number of requested quotes from U-RQ database
+    - Else, raise error 
+  exposed_add_quote(name As String, quote As String)
+    - 'name' is a string representing the username
+    - 'quote' is a string representing the quote to add_quote
+    - Check if user is in the U-RQ database.
+    - If valid, place quote in the Q-UA database along with the username
+    - Else, raise error
+</ClassMethods>

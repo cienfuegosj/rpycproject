@@ -14,6 +14,22 @@ class QuoteServerAdmin:
     self.dict_uqr_db = {}
     self.dict_qua_db = {}
     
+  def UserRequestedQuote(self, name):
+    '''
+    Changes the database file for the UQR and increments
+    the quote request count.
+    '''
+    file_UQR = open(self.user_quotecount_file, 'r')
+    lines = file_UQR.readlines()
+    file_UQR.close()
+    
+    file_UQR = open(self.user_quotecount_file, 'w')
+    for line in lines:
+      if name in line.strip():
+        file_UQR.write("{0};{1}\n".format(name, str(int(self.dict_uqr_db[name]) + 1)))
+      else:
+        file_UQR.write(line)
+       
   def getUQRdb(self):
     '''
     Read in UQR file which is a CSV (Comma-Separated), which is the form
@@ -22,8 +38,7 @@ class QuoteServerAdmin:
     '''
     file_UQR = open(self.user_quotecount_file, 'r')
     for line in file_UQR:
-      self.dict_uqr_db[line.split(';')[0].strip()] = line.split(';')[1].strip()
-      
+      self.dict_uqr_db[line.split(';')[0].strip()] = line.split(';')[1].strip()     
     file_UQR.close()
       
     return self.dict_uqr_db  

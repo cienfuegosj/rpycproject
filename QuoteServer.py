@@ -14,20 +14,15 @@ class QuoteServer(rpyc.Service):
      pass
     
   class exposed_QS:
-    def __init__(self, password):
+    def __init__(self):
       '''
       Create the Quote Server Administrator that will allow us to pull dictionaries
       that have the database information.
       '''     
-      
-      if password == "secretpassword":
-        self.DBAdmin = QuoteServerAdmin("Database/UQRdb.txt", "Database/QUAdb.txt")
-        self.dict_UQR = self.DBAdmin.getUQRdb()
-        self.dict_QUA = self.DBAdmin.getQUAdb()
-        print("Valid Client Authentication")
-      else:
-        print("Invalid Client Authentication")
-        raise ValueError("Invalid password, try again.")
+         
+      self.DBAdmin = QuoteServerAdmin("Database/UQRdb.txt", "Database/QUAdb.txt")
+      self.dict_UQR = self.DBAdmin.getUQRdb()
+      self.dict_QUA = self.DBAdmin.getQUAdb()
      
     def exposed_register(self, name):
       '''
@@ -51,8 +46,10 @@ class QuoteServer(rpyc.Service):
       Returns random quote <String> from QUA database if valid user.
       Otherwise, raise error.
       '''
-      print("Getting Quote...")
+      print("Getting quote for {0}...".format(name))
+      self.dict_QUA = self.DBAdmin.getQUAdb() # Update
       if name in self.dict_UQR.keys():
+        self.DBAdmin.UserRequestedQuote(name)
         return random.choice(self.dict_QUA.keys())
       else:
         raise ValueError("Invalid username. Try a different username.")
@@ -64,7 +61,7 @@ class QuoteServer(rpyc.Service):
       Returns number of quotes requested from the user if valid user.
       Otherwise, raise error.
       '''
-      print("Returning number of quotes requested...")
+      print("Returning number of quotes requested for {0}...".format(name))
       self.dict_UQR = self.DBAdmin.getUQRdb() # Update
       if name in self.dict_UQR.keys():
         return self.dict_UQR[name]

@@ -1,6 +1,3 @@
-cienfuegosj;0
-maciasm;0
-cienfuegosa;0
-heannie;0
-parkerr;0
-jadudm;0
+cienfuegosj;3
+parkerr;1
+heannie;1

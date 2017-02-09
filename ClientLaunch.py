@@ -9,17 +9,8 @@ def main():
   print("Connected")
   
   loggedin = False
-  
-  while loggedin == False:
-    password = raw_input("Please enter the database password: ")
-    try:
-      srvclient = client.root.QS(password)
-      loggedin = True
-      print("Logged in!")
-    except ValueError:
-      print(ValueError)
-      
-      
+  srvclient = client.root.QS()
+            
   print("1 is for registering\n2 is for get quote\n3 is for get quote req name\n4 is for add quote\n")
     
   selection = raw_input("Select an option from above: ")
@@ -40,7 +31,7 @@ def main():
   # Gets Number of Requested Quotes
   elif int(selection) == 3:
     get_req_name = raw_input("Please enter your name: ")
-    print("Number of Requested Quote by {0} is {1}".format(get_req_name, srvclient.get_req_name(get_req_name)))
+    print("Number of Requested Quote by {0} is {1}".format(get_req_name, srvclient.quotes_requested(get_req_name)))
     
   # Add Quote
   elif int(selection) == 4:

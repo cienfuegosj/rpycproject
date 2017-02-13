@@ -35,6 +35,7 @@ class QuoteServer(rpyc.Service):
       print("Registering {0}...".format(name))
       if name not in self.dict_UQR.keys():
         self.DBAdmin.addUQRItem(name)
+        self.dict_UQR = self.DBAdmin.getUQRdb() # Update
         return "OK"
       else:
         return "KO"

@@ -29,7 +29,7 @@ for u in usernames:
   for i in range(0, numquotes):
     # Invoke the "get_quote" method on the server and print
     # the string that it returns.
-    print(client.root.get_quote(u))
+    print(srvclient.get_quote(u))
   
   # When I'm done looping, find out how many quotes this user
   # has requested. If the server just started, it should

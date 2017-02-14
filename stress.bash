@@ -16,14 +16,9 @@
 
 source venv/bin/activate
 
-servers=("localhost")
-
-for server in ${servers[*]}
-do
 	echo "Running $server"
 	for (( c=0; c<=$1; c++ ))
 	do
 		echo $server : $c
-  	( python rpyc-stressor.py $c $1 $2 $3 2>&1 ) &
+  	( python rpyc-stressor.py $c $1 $2 $3 2>&1 )
 	done
-done

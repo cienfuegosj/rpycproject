@@ -16,9 +16,7 @@
 
 source venv/bin/activate
 
-	echo "Running $server"
 	for (( c=0; c<=$1; c++ ))
 	do
-		echo $server : $c
   	( python rpyc-stressor.py $c $1 $2 $3 2>&1 )
 	done

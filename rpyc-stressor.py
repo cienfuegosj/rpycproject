@@ -11,6 +11,14 @@ import random, \
        sys, \
        time
 
+# Setup Google Sheets API and Authentication
+import gspread 
+from oauth2client.service_account import ServiceAccountCredentials
+scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/auth/drive']
+credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread.json', scope)
+# Creates a Google Spreadsheets Client with the proper JSON credentials
+gc = gspread.authorize(credentials)
+
 # Grab a connection to the server
 client = rpyc.connect("localhost", 18861)
 srvclient = client.root.QS()
@@ -97,4 +105,6 @@ rps = (num_users * (num_req + 2)) / all
 # Print the data. If you want to get fancy, you could generate a timestamp
 # and use it to store the data in a file. We'll do that for our 
 # next server test.
-print("Index:\t{0}\nTotal Processes:\t{1}\nNumber of Users:\t{2}\nNumber of Requests:\t{3}\nTotal Time:\t{4}\nAverage Time:\t{5}\nRequests Per Second:\t{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))
+
+
+print("{0},{1},{2},{3},{4},{5},{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))

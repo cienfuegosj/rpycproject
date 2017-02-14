@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "cienfuegosj-155914",
+  "private_key_id": "c5af87847fb0fea3949e46b6b23071de1de4205b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDQspRZjHK1R0pD\nAV1VGAIqo6YD8HXy86O1ywfh2lp4G5vk+7ERP6d0ziXegEBGfqJztIxktkT55aMQ\nGj9xJiX97PM3/fikDw66CTLXfZTQduAGka1tXPpUMOjx//w3gHR5PNzLNpimPSHr\n6nMcHIHkWtuPemMZZKMcUIFxq/FHmAO9lfdiWW3kfasLOhLim/sEpPBhkRA74bPQ\nWw4wzOT5ViE6aR6Qed7rD9YOtrTeDZCVFLifOH0hpnRoBFyiST96zoXT3YKKsvBK\n7RIJV7WfEv3TvSyUP8otwaQ1pdNlLcfaMC7SEEmEvw45aNlvtmy7tKQ12yWT9Uk8\nOCvkqRWrAgMBAAECggEBAIG+M5oERZ/LRTCo3YQ0W8x0VpZmXH2A2EsBgNH5NHss\n9tsBWlBV2V41drd/1fW9bnMuUIWgBvuwtpIhL0XBqKbXM1Gg833S2p3vcAslyGld\nLeMHl+DAh+PlUDx6nytGEaL5om43b+kRYlBPPebBFkOH9K2bMZasyPamWgL4GRUf\nHdUTNJqLVgMNDWRaGrt3rn/wy1e6DaHDklN/yjRasVeS/6MdDsg0yhqgLHP57zJq\nIoIOsMK9LMX5Zk8maMmVU4E7r5ugce0RSgMaHYtQHjjT2L0mOFjtPpqGBYE0FXn8\nCNFXf9aLBR1/LOCrNdqBToC1IeSkgBk0ivTy8+f0XUECgYEA7js/Nuc/HGP+c/WJ\n3pbhZdoHNkSSmWnvyPojmo2+w9wcXbnATpOUVcX9E/EcPPPZi51LrrvJYblUbgx0\naogHzGc6IChUK+n1i2BwaYRa7f4InYVNlhHi/UTf8PE81B95I9JmpRRHuojOTP5+\nooFiPqFGmUgpsOwd03oW0je2yAsCgYEA4ENq9GUcluRjY9aJwzl18bpbZ7YAjEW7\nbZdwhlD1WZfMQdiiNzVERe+oRMNapeGWM9pD4mOTZwNsGuAcKfk+F/vw1ON57Ajz\n/TukHpra+ofDLtgo111Jkfrt+kXzvynZPfzKHW+gYqVhStw5pqF6F+kbu++4YA34\n8usXcuDgTOECgYBO2wOgq8jDIAIw5fyd1jmDmji66NXRvDQnxUyVsweLE0e8amjS\nWZ1HCwMrX6rmLh07TnSnwPb2xv7AcpTyUlaqfRzLWi4KXyXs3Z43/xyOHIFDisVU\nwFTvWqX5vhBRcp2JkvJxABaCExieebr3FXasnnuc7zsFmhKBVq9JJDH3YwKBgG8W\nFhGvUCUSRoU6zQyuFtVBWWubBNR26iuT+0IdMhtKDPyE4X11XjdCSlidZ/aJMszG\njh/C8U3yrQb3AhxsgKyCuL3LXCZmHO3QMDCUxmmY/D7lBf4AEKRF5sG1CtMjWJ/S\n6w7/rzON9g6N3eTDUeYsKvfB+9NguHMjrn7SE2khAoGAcwwjzql+SdiJjZvZlqJ2\nAMjDs60VaPIn4gKIh4Nv99iw7YJ5e4LsQ1nzHebpaZks84ZF85/6QF3tPH2SF+MZ\n1S6I/qn1Q9T3uVdzBHGhBwxAhRm3kybjtYZnCGIDHiV1dpfbb6XtjgbvbaCJA0OE\nVVlN8zo4zo6WLrYsh+H1tfM=\n-----END PRIVATE KEY-----\n",
+  "client_email": "cscnetworking@cienfuegosj-155914.iam.gserviceaccount.com",
+  "client_id": "107018902055400719789",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cscnetworking%40cienfuegosj-155914.iam.gserviceaccount.com"
+}

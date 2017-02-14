@@ -10,7 +10,7 @@ srvclient = client.root.QS()
 # Now, lets test the quote server.
 # My client loops through four different users. 
 # Why? because I wanted to test more than a single username.
-usernames = ["jadudm", "vaderd", "potterh", "belaqual"]
+usernames = ["johnsonk", "mousem", "potterh", "belaqual"]
 
 # Loop through each of the usernames.
 for u in usernames:

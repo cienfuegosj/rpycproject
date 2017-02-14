@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # Invoke using
 # python rpyc-stressor≥py 0 0 30 10
 # which would mean
@@ -61,9 +62,9 @@ for i in range(0, num_users):
   # Keep track of the username I just generated.
   users_genned.append(user)
   # Register the user. This looks just like the client script.
-  srvclient.root.register(user)
+  srvclient.register(user)
   # Add a quote from this user. It is a boring quote.
-  srvclient.root.add_quote(user, "This is quote {1} from {0}.".format(user, i))
+  srvclient.add_quote(user, "This is quote {1} from {0}.".format(user, i))
   
   # Start timing the requests that this user makes.
   requests_start = time.time()
@@ -73,7 +74,7 @@ for i in range(0, num_users):
     # it takes to print. On a cloud sever, that means timing how long
     # it takes the characters to be transmitted over the network to my local
     # terminal... we don't want to time that.
-    srvclient.root.get_quote(user)
+    srvclient.get_quote(user)
   # Stop timing the request loop.
   requests_end = time.time()
   # Append the time it took to make these requests to the list of loop
@@ -96,4 +97,4 @@ rps = (num_users * (num_req + 2)) / all
 # Print the data. If you want to get fancy, you could generate a timestamp
 # and use it to store the data in a file. We'll do that for our 
 # next server test.
-print("{0},{1},{2},{3},{4},{5},{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))
+print("Index:{0}\n,Total Processes:{1}\n,Number of Users:{2}\n,{3},{4},{5},{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))

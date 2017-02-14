@@ -20,12 +20,12 @@ srvclient = client.root.QS()
 
 # I generate random usernames. These are the bases for 
 # those random usernames.
-usernames = ["alpha", "bravo", "charlie", "delta", \
-             "echo", "foxtrot", "golf", "hotel", \
-             "india", "juliet", "kilo", "lima", "motel", \
-             "november", "oscar", "papa", "quebec", \
-             "romeo", "sierra", "tango", "uniform", "victor", \
-             "whiskey", "xray", "yankee", "zulu"
+usernames = ["alphaa", "bravob", "charliec", "deltad", \
+             "echoe", "foxtrotf", "golfg", "hotelh", \
+             "indiai", "julietj", "kilok", "limal", "motelm", \
+             "novembern", "oscaro", "papap", "quebecq", \
+             "romeor", "sierras", "tangot", "uniformu", "victorv", \
+             "whiskeyw", "xrayx", "yankeey", "zuluz"
             ]
 
 # This keeps track of the names of the users I generate.

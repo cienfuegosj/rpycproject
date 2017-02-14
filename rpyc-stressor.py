@@ -97,4 +97,4 @@ rps = (num_users * (num_req + 2)) / all
 # Print the data. If you want to get fancy, you could generate a timestamp
 # and use it to store the data in a file. We'll do that for our 
 # next server test.
-print("Index:{0}\n,Total Processes:{1}\n,Number of Users:{2}\n,{3},{4},{5},{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))
+print("Index:\t{0}\nTotal Processes:\t{1}\nNumber of Users:\t{2}\nNumber of Requests:\t{3}\nTotal Time:\t{4}\nAverage Time:\t{5}\nRequests Per Second:\t{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))

@@ -9,7 +9,8 @@
 import random, \
        rpyc, \
        sys, \
-       time
+       time, \
+       datetime 
 
 # Setup Google Sheets API and Authentication
 import gspread 
@@ -18,9 +19,16 @@ scope = ['https://spreadsheets.google.com/feeds','https://www.googleapis.com/aut
 credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread.json', scope)
 # Creates a Google Spreadsheets Client with the proper JSON credentials
 gc = gspread.authorize(credentials)
+sh = gc.open('Testing Spreadsheet')
+#sh = gc.create('Testing Spreadsheet {0}'.format(str(datetime.datetime.now())))
+sh.share('cienfuegoseveryday@gmail.com', perm_type='user', role='owner')
+worksheet = sh.get_worksheet(0)
 
 # Grab a connection to the server
-client = rpyc.connect("localhost", 18861)
+# Local VM Server
+# client = rpyc.connect("localhost", 18861)
+# Asia VM Server
+client = rpyc.connect("104.199.179.195",8888)
 srvclient = client.root.QS()
 
 # The "root" is the class we registered with the server.
@@ -106,5 +114,5 @@ rps = (num_users * (num_req + 2)) / all
 # and use it to store the data in a file. We'll do that for our 
 # next server test.
 
-
+worksheet.append_row([run_index, num_processes,num_users, num_req, all, average, rps, datetime.datetime.now().strftime("%Y-%m-%d %H:%M")])
 print("{0},{1},{2},{3},{4},{5},{6}".format(run_index, num_processes, num_users, num_req, all, average, rps))
